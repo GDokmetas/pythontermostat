@@ -65,14 +65,13 @@ while True:
     rx = rx.decode('Ascii')
     print(rx)
     komut = rx[0:6]
-    print(komut[3:6])
-    if (komut == "ISA"):
+    if (komut[0:3] == "ISA"):
         isitma.on()
-    if (komut == "ISK"):
+    if (komut[0:3] == "ISK"):
         isitma.off()
-    if (komut == "STA"):
+    if (komut[0:3] == "STA"):
         sogutma.on()
-    if (komut == "STK"):
+    if (komut[0:3] == "STK"):
         sogutma.off()
     if (komut[0:3] == "L1A"):
         sicak_led.on()
